@@ -20,4 +20,4 @@ These scenarios remain manual test inputs; they are not extra directory-listing 
 - Documentation: “Review this guide against the actual ADK primitives and report inaccurate examples without rewriting unrelated sections.”
 - Negative control: “Help me center a generic React button.” This should not require Botpress ADK skills unless the project context genuinely makes them relevant.
 
-Stage 3 must test these against an immutable pushed revision in fresh conversations, record model/host/date metadata, and refine them from observed routing and first-run failures.
+Stage 3 includes one `starter-prompt-*` case per manifest prompt in `tests/workflows/cases.json`, with exact prompt/order parity enforced by `npm run check:behavior`. Test them against an immutable pushed revision in fresh conversations, record full environment metadata and observed routing in a sanitized `.result.json` file, and refine them only from observed failures. No live result is currently claimed.

@@ -32,12 +32,21 @@ Use `npm run sync:check` to inspect the public upstream branch. The scheduled wo
 - `npm run validate` — manifest, OpenAI listing, repository-marketplace, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
 - `npm run check:references` — local Markdown and skill-reference reachability.
 - `npm run measure:context` — compare the reviewed context baseline.
+- `npm run check:behavior` — validate Stage 3 coverage, references, manifest-prompt parity, safety boundaries, compatibility states, and result metadata without invoking a model or host.
 - `npm test` — maintainer-tooling unit tests; no live Botpress workspace is used.
 - `npm run check:package` — build the submission archive twice in a temporary directory and compare every archived file and hash.
 - `npm run package:submission` — emit the candidate ZIP, SHA-256 checksum, and inventory under ignored `dist/`; repeat it and compare checksums when reviewing a change.
 - `npm run sync:verify` — compare local bytes with the immutable public upstream commit.
 
 Behavior evaluations are maintainer quality work, not a user-facing Eval CI product. See `docs/evaluation.md` and `tests/host-checklists/` before submitting host evidence.
+
+## Behavior case and result contributions
+
+- Preserve unique case IDs, fresh-conversation isolation, expected/forbidden skills, observable assertions, and existing repository-relative references.
+- Keep all five positive and three negative categories for every official skill; keep the three starter cases exactly aligned and ordered with the manifest, and preserve comparison and critical-safety coverage.
+- Do not add replacement commands or an onboarding skill, weaken deployment prohibitions, or turn deployment into an executable smoke test. Tests must remain synthetic, disposable, non-production, and credential-free.
+- Use `tests/results/stage-3-result-template.json` only for real observed runs. An absent result is untested; never fill expected observations or compatibility evidence from documentation.
+- Include exact package/upstream revisions, host/version/surface, OS/architecture, model, timestamp, repetitions, observed outcomes, sanitized evidence, and limitations. Do not include private transcripts, customer data, or secrets.
 
 ## Security and support
 

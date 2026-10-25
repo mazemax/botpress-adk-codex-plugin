@@ -14,6 +14,8 @@ All notable distribution changes are recorded here. Upstream ADK changes are ide
 - Repository-marketplace metadata and OpenAI skills-only listing fields, including three curated starter prompts and original community branding.
 - Reproducible skills-only submission packaging with an explicit 66-file inventory, archive read-back verification, and SHA-256 checksum.
 - Host-specific quickstart, workflow, troubleshooting, update, rollback, uninstall, and submission guidance with untested surfaces identified.
+- Versioned Stage 3 activation, negative, overlap, starter-prompt, comparison, and critical-safety inventories with deterministic structural validation.
+- Compatibility state matrix, sanitized real-host result template, and reproducible evaluation protocols; no live behavior result is implied.
 
 ### Not yet verified
 
