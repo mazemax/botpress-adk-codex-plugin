@@ -11,13 +11,15 @@ Release candidate: `1.0.0-rc.1`. Do not mark an item complete without linked, ob
 - [ ] Package inventory contains exactly the approved 66 regular files and no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, commands, screenshots, or unexpected host components.
 - [ ] Two clean `npm run package:submission -- --require-clean` builds produce identical bytes and SHA-256 values; archive read-back and inventory inspection pass.
 - [ ] The OpenAI listing metadata, three manifest prompts, marketplace source, and submission ZIP were reviewed at the same immutable revision.
+- [ ] `npm run check:behavior` validates all case inventories, manifest-prompt parity, deployment boundaries, compatibility states, and any actual result records.
 - [ ] Reference and context reports were reviewed; no unexplained growth remains.
 
 ## Host and behavior gates
 
-- [ ] Clean Codex installation and expected skill discovery pass on the declared support matrix.
+- [ ] Clean Codex installation and expected six-skill and three-starter-prompt discovery pass on the declared support matrix.
 - [ ] The documented golden path passes with synthetic data and no production deployment.
-- [ ] Direct, indirect, negative, overlap, and safety cases meet published thresholds.
+- [ ] Direct, indirect, negative, overlap, comparison, and safety cases meet published thresholds at the release SHA.
+- [ ] Sanitized `*.result.json` evidence records exact environment metadata and observations; the unfilled template is not counted as a result.
 - [ ] Update, rollback, duplicate-install, and uninstall behavior pass with residue documented.
 - [ ] Compatibility results identify host/version, OS, model, package/upstream revisions, and untested configurations.
 

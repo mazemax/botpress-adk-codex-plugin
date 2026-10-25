@@ -15,7 +15,7 @@ The roadmap improves packaging and developer experience without adding a doctor 
 
 ## Stage 2 — Host-native developer experience
 
-**Status:** In progress. Repository-marketplace metadata and deterministic submission packaging are implemented locally; real-host golden paths and external review remain open.
+**Status:** Host-native artifacts are merged; real-host golden-path exit evidence and external review remain open.
 
 - Document the Codex repository-marketplace quickstart, curated prompts, troubleshooting, update, rollback, and uninstall paths without claiming unrun host results.
 - Validate OpenAI skills-only listing metadata and build a reproducible 66-file submission ZIP with a checksum and inventory.
@@ -23,6 +23,8 @@ The roadmap improves packaging and developer experience without adding a doctor 
 - Complete real-host workflows before capturing screenshots or presenting review materials as verified evidence.
 
 ## Stage 3 — Behavior, safety, and compatibility
+
+**Status:** In progress. Versioned inventories, compatibility states, result templates, and structural validation are present; no live behavior or compatibility result has been recorded.
 
 - Run direct, indirect, negative, overlap, and safety cases with recorded host/model/date metadata.
 - Test representative golden paths with and without the distribution.
