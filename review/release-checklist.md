@@ -8,7 +8,9 @@ Release candidate: `1.0.0-rc.1`. Do not mark an item complete without linked, ob
 - [ ] `npm run sync:verify` confirms every managed file against `79abe10503bf6dc70486737c94159322e108e496` or a newly reviewed sync commit.
 - [ ] CI is green on the immutable tag/SHA; all GitHub Actions are pinned and tokens are least-privilege.
 - [ ] License, `NOTICE.md`, `UPSTREAM.json`, community status, and publisher metadata are correct.
-- [ ] Package inventory contains no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, or unexpected host components.
+- [ ] Package inventory contains exactly the approved 66 regular files and no secrets, symlinks, binaries, telemetry, MCP, agents, hooks, commands, screenshots, or unexpected host components.
+- [ ] Two clean `npm run package:submission -- --require-clean` builds produce identical bytes and SHA-256 values; archive read-back and inventory inspection pass.
+- [ ] The OpenAI listing metadata, three manifest prompts, marketplace source, and submission ZIP were reviewed at the same immutable revision.
 - [ ] Reference and context reports were reviewed; no unexplained growth remains.
 
 ## Host and behavior gates

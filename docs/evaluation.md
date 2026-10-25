@@ -12,9 +12,11 @@ See `docs/compatibility.md`, `tests/results/`, and the current pull request chec
 npm ci
 npm run check
 npm run sync:verify
+npm run package:submission
+npm run package:submission
 ```
 
-These commands validate only repository structure, provenance, references, context measurements, and community scripts. They do not invoke the ADK CLI or prove model behavior.
+These commands validate only repository structure, provenance, references, context measurements, community scripts, and submission-archive reproducibility. Compare the two reported SHA-256 values and inspect the 66-file inventory. They do not invoke the ADK CLI, scan the archive through OpenAI, or prove model behavior.
 
 ## Planned activation inventory
 

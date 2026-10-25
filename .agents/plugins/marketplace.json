@@ -1,0 +1,21 @@
+{
+  "name": "mazemax-botpress-adk",
+  "interface": {
+    "displayName": "mazemax Botpress ADK"
+  },
+  "plugins": [
+    {
+      "name": "botpress-adk-community",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mazemax/botpress-adk-codex-plugin.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
