@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "botpress-adk-community",
+  "version": "1.0.0-rc.1",
+  "description": "Community-maintained Botpress ADK skills for OpenAI Codex. Community-maintained by mazemax; not endorsed by Botpress.",
+  "author": {
+    "name": "mazemax",
+    "url": "https://github.com/mazemax"
+  },
+  "homepage": "https://github.com/mazemax/botpress-adk-codex-plugin",
+  "repository": "https://github.com/mazemax/botpress-adk-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "botpress",
+    "adk",
+    "agent-development",
+    "community"
+  ]
+}

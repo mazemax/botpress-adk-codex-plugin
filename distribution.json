@@ -1,0 +1,7 @@
+{
+  "host": "codex",
+  "repository": "https://github.com/mazemax/botpress-adk-codex-plugin",
+  "pluginName": "botpress-adk-community",
+  "displayName": "Botpress ADK Community",
+  "manifestPath": "plugin.json"
+}
