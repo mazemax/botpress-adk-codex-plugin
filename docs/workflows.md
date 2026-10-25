@@ -1,6 +1,6 @@
 # Workflow guide
 
-The package includes the official skills; choose a task rather than loading the entire reference tree. Stage 1 does not claim real-host activation evidence.
+The package includes the official skills; choose a task rather than loading the entire reference tree. Stage 2 supplies three curated starter prompts but does not claim real-host activation evidence. The manifest prompts and their exact documentation copy are in `review/starter-prompts.md`; additional scenarios there are maintainer tests, not extra listing prompts.
 
 | Task | Official skill | Upstream command source | Example request |
 |---|---|---|---|
@@ -27,4 +27,4 @@ The package includes the official skills; choose a task rather than loading the 
 6. Record expected/observed results and the host, model, package, and upstream versions.
 7. Do not deploy. Production shipping is outside unattended smoke testing.
 
-Stage 1 has not completed this golden path in a real Codex host. The steps are the verification protocol, not a compatibility claim.
+Stage 2 has not completed this golden path in a real Codex host. The steps are the verification protocol, not a compatibility claim.

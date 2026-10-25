@@ -15,9 +15,12 @@ The roadmap improves packaging and developer experience without adding a doctor 
 
 ## Stage 2 — Host-native developer experience
 
-- Complete and test the Codex quickstart, workflow guide, troubleshooting, update, rollback, and uninstall paths.
-- Add only the host-specific packaging required by the approved plan.
-- Produce current screenshots and review materials from verified workflows.
+**Status:** In progress. Repository-marketplace metadata and deterministic submission packaging are implemented locally; real-host golden paths and external review remain open.
+
+- Document the Codex repository-marketplace quickstart, curated prompts, troubleshooting, update, rollback, and uninstall paths without claiming unrun host results.
+- Validate OpenAI skills-only listing metadata and build a reproducible 66-file submission ZIP with a checksum and inventory.
+- Keep the package skills-only: no converted commands, onboarding skill, screenshots, or unsupported host components.
+- Complete real-host workflows before capturing screenshots or presenting review materials as verified evidence.
 
 ## Stage 3 — Behavior, safety, and compatibility
 

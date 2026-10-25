@@ -20,6 +20,8 @@ import {
   type Host,
   type UpstreamManifest,
 } from './lib/common.js'
+import { verifyGeneratedCommands } from './generate-commands.js'
+import { validateCodexDistribution } from './validate-codex.js'
 
 const require = createRequire(import.meta.url)
 const Ajv2020 = require('ajv/dist/2020.js') as typeof Ajv2020Class
@@ -125,12 +127,7 @@ function validateManifest(root: string, distribution: DistributionConfig, versio
     }
   }
 
-  if (distribution.host === 'codex') {
-    const extensions = manifest.extensions as Record<string, Record<string, unknown>> | undefined
-    if (extensions?.['com.openai']?.onboardingSkill) {
-      throw new Error('Codex must not add an onboarding skill')
-    }
-  }
+  if (distribution.host === 'codex') validateCodexDistribution(root, distribution)
 }
 
 function validateComponents(root: string, host: Host, upstream: UpstreamManifest): void {
@@ -200,6 +197,7 @@ export function validateRepository(root: string): { files: number; skills: numbe
   verifyProvenance(root, upstream)
   validateManifest(root, distribution, packageJson.version)
   validateComponents(root, distribution.host, upstream)
+  verifyGeneratedCommands(root)
   validateWorkflowPins(root)
   validateDocuments(root, packageJson.version)
   listRepositoryFiles(root)

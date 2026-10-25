@@ -2,9 +2,9 @@
 
 **Community-maintained by [mazemax](https://github.com/mazemax); not endorsed by Botpress.**
 
-A production-oriented community distribution of the official [Botpress ADK skills](https://github.com/botpress/skills) for OpenAI Codex, with immutable provenance, explicit side-effect guidance, validation tooling, and honest compatibility evidence.
+A production-oriented community distribution of the official [Botpress ADK skills](https://github.com/botpress/skills) for OpenAI Codex, with immutable provenance, explicit side-effect guidance, curated starter prompts, reproducible packaging, and honest compatibility evidence.
 
-**Current status:** `1.0.0-rc.1` release candidate. The repository foundation is implemented; clean Codex installation, model behavior, external beta, and marketplace review are not yet verified. Do not interpret the manifest or static checks as production readiness.
+**Current status:** `1.0.0-rc.1` release candidate. The repository marketplace, OpenAI listing metadata, and skills-only submission packaging are implemented. Clean Codex installation, model behavior, external beta, and marketplace review are not verified. Do not interpret the manifest, archive checks, or static tests as production readiness or OpenAI approval.
 
 ## Included official content
 
@@ -19,13 +19,19 @@ Upstream `v2.0.7` at commit `79abe10503bf6dc70486737c94159322e108e496` provides 
 | `adk-evals` | Official ADK eval format, assertions, and live-dev testing guidance |
 | `adk-frontend` | Botpress frontend authentication, typed clients, action calls, and state patterns |
 
-The pinned source also contains 12 official commands, retained under `upstream/commands/` for audit and Stage 2 conversion where applicable. They are not silently exposed as portable commands. Codex remains skills-only.
+The pinned source also contains 12 official Claude Code commands under `upstream/commands/` for audit. They are not installed as Codex commands. Codex remains skills-only and uses three curated starter prompts for new-bot, debugging, and official-eval workflows.
 
 ## Install and first success
 
-Follow [the Codex quickstart](docs/quickstart.md), then use the [workflow guide](docs/workflows.md) and [real-host checklist](tests/host-checklists/codex.md). Marketplace installation is not currently available or claimed.
+Follow [the Codex quickstart](docs/quickstart.md), then use the [workflow guide](docs/workflows.md) and [real-host checklist](tests/host-checklists/codex.md). The quickstart describes the pre-release repository-marketplace flow derived from official OpenAI documentation; it has not passed on a real host. The universal public directory has no listing for this plugin.
 
 Start with a read-oriented ADK question in a fresh session. For project work, use a disposable ADK directory, synthetic data, and a dedicated non-production workspace.
+
+## Submission package
+
+`npm run package:submission` builds an ignored local candidate under `dist/`. The explicit allowlist contains `plugin.json`, `LICENSE`, `NOTICE.md`, the square SVG, and the exact pinned skill tree—66 regular files for this revision. The build reads the ZIP back, verifies every file, repeats the build, and emits a SHA-256 checksum and inventory. It excludes maintainer tooling, commands, MCP/apps, hooks, agents, telemetry, screenshots, and secrets files.
+
+A local candidate is not submission-ready. Release packaging additionally requires a clean working tree and `v1.0.0-rc.1` at `HEAD`; human review, immutable-tag CI, real-host evidence, verified publisher identity, and OpenAI review remain separate gates. See [the submission runbook](review/openai-submission.md).
 
 ## What this plugin does not do
 
@@ -44,6 +50,7 @@ Review the [side-effect inventory](docs/side-effects.md): official workflows can
 - [Exact upstream provenance](review/provenance.md) and machine-readable `UPSTREAM.json`
 - [Compatibility and untested configurations](docs/compatibility.md)
 - [Evaluation methodology](docs/evaluation.md) and [context baseline](tests/results/context-baseline.json)
+- [Curated prompts](review/starter-prompts.md) and [submission checklist](review/openai-submission.md)
 - [Update, rollback, duplicate-install, and uninstall guidance](docs/update-uninstall.md)
 - [Troubleshooting](docs/troubleshooting.md), [support](SUPPORT.md), and [security reporting](SECURITY.md)
 - [Changelog](CHANGELOG.md), [roadmap](ROADMAP.md), and [release gates](review/release-checklist.md)

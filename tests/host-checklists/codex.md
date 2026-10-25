@@ -9,6 +9,8 @@
 - [ ] Record install success/failure and exact version/source.
 - [ ] Verify all six expected skills are discoverable; record missing or duplicate components.
 - [ ] Verify only intended references load for a focused question.
+- [ ] Confirm the three manifest starter prompts match `review/starter-prompts.md`; do not treat maintainer-only scenarios as listing prompts.
+- [ ] Record the actual marketplace source/ref and installed revision; do not mistake moving `main` for an immutable release.
 - [ ] No replacement slash commands or onboarding skill are permitted; this package is skills-only.
 
 ## Read-oriented activation

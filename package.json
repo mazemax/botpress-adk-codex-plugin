@@ -21,13 +21,16 @@
     "sync:check": "tsx scripts/sync-upstream.ts --check",
     "sync:verify": "tsx scripts/sync-upstream.ts --verify",
     "sync:apply": "tsx scripts/sync-upstream.ts --apply",
+    "package:submission": "tsx scripts/package-submission.ts",
+    "check:package": "tsx scripts/package-submission.ts --check",
     "test": "vitest run",
-    "check": "npm run typecheck && npm run validate && npm run check:references && npm run measure:context && npm test"
+    "check": "npm run typecheck && npm run validate && npm run check:references && npm run measure:context && npm test && npm run check:package"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
+    "fflate": "0.8.3",
     "tsx": "4.23.15",
     "typescript": "7.0.2",
     "vitest": "5.0.5"

@@ -15,5 +15,31 @@
     "adk",
     "agent-development",
     "community"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Botpress ADK Community",
+        "shortDescription": "Build Botpress ADK bots",
+        "longDescription": "Build, debug, evaluate, document, and connect Botpress ADK bots with the official Botpress ADK skills. Community-maintained by mazemax; not endorsed by Botpress. Review side effects before workspace changes or deployment.",
+        "developerName": "mazemax",
+        "category": "Developer Tools",
+        "websiteURL": "https://github.com/mazemax/botpress-adk-codex-plugin",
+        "supportURL": "https://github.com/mazemax/botpress-adk-codex-plugin/issues",
+        "privacyPolicyURL": "https://github.com/mazemax/botpress-adk-codex-plugin/blob/main/PRIVACY.md",
+        "defaultPrompt": [
+          "In this disposable directory, initialize a Botpress ADK project with me and explain account-affecting steps before running them.",
+          "Investigate this sanitized ADK failure using checks, logs, and traces, then propose a targeted fix without deploying.",
+          "Write an official ADK regression eval for this synthetic order-lookup scenario and explain its assertions."
+        ],
+        "brandColor": "#0369A1",
+        "brandColorDark": "#7DD3FC",
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "publication": {
+        "release_notes": "1.0.0-rc.1: initial release candidate with six official Botpress ADK skills from botpress/skills v2.0.7 at 79abe10503bf6dc70486737c94159322e108e496, community packaging, curated prompts, and a reproducible skills-only distribution. Real-host behavior and public-directory approval remain unverified."
+      }
+    }
+  }
 }

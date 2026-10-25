@@ -29,10 +29,12 @@ Use `npm run sync:check` to inspect the public upstream branch. The scheduled wo
 
 ## Tests
 
-- `npm run validate` — manifest, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
+- `npm run validate` — manifest, OpenAI listing, repository-marketplace, inventory, attribution, component-boundary, workflow-pin, and recorded-hash checks.
 - `npm run check:references` — local Markdown and skill-reference reachability.
 - `npm run measure:context` — compare the reviewed context baseline.
 - `npm test` — maintainer-tooling unit tests; no live Botpress workspace is used.
+- `npm run check:package` — build the submission archive twice in a temporary directory and compare every archived file and hash.
+- `npm run package:submission` — emit the candidate ZIP, SHA-256 checksum, and inventory under ignored `dist/`; repeat it and compare checksums when reviewing a change.
 - `npm run sync:verify` — compare local bytes with the immutable public upstream commit.
 
 Behavior evaluations are maintainer quality work, not a user-facing Eval CI product. See `docs/evaluation.md` and `tests/host-checklists/` before submitting host evidence.
